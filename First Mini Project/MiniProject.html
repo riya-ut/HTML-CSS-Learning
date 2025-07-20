@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: none;
+        }
+        input[name = "name"]:hover+p
+        {
+           display: inline;
+           background-color: gray;
+            
+        }
+        input[name = "priemail"]:hover+p
+        {
+           display: inline;
+           background-color: gray;
+            
+        }
+        input[name = "pw"]:hover+p
+        {
+           display: inline;
+           background-color: gray;
+            
+        }
+        input[type ="radio"]:checked
+        {
+            width: 15px;
+            height: 15px;
+           
+        }
+        input[type ="radio"]:checked +label
+        {
+            color: purple;
+        }
+
+        input[required]{
+            border: 2px solid purple;
+        }
+
+        input[required]:focus {
+           background-color: silver;
+        }
+
+        img{
+            display: none;
+        }
+        input[name="priemail"]:valid ~ img.Valid{
+            display: inline;
+        }
+
+        input[name="priemail"]:invalid ~ img.Invalid{
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Sign Up Form</h1>
+    <form action="">
+        <label>Name:</label>
+        <input type="text" size="15" name="name" required>
+        <p>Enter your name</p><br>
+        <label>College:</label>
+        <input type="text" size="15" name="College" disabled> <br>
+        <label>Primary Email:</label>
+        <input type="email" size="15" name="priemail" required>
+        <p>Enter your Primary email</p>
+        <img src="—Pngtree—green check mark_8873320.png" width="15px" height="15px" class="Valid">
+        <img src="warning-icon.png" width="15px" height="15px" class="Invalid"><br>
+        <label>Secondary Email:</label>
+        <input type="email" size="15" name="Sec email">  <br>
+        <label>Password:</label>
+        <input type="password" size="15" name="pw" required>
+        <p>Enter your Password, min 6 letters</p><br>
+        <label>Gender</label>
+        <input type="radio" name="Gender" value="male">
+        <label>Male</label>
+        <input type="radio" name="Gender" value="female">
+        <label>Female</label>
+        <input type="radio" name="Gender" value="other"> 
+        <label>Other</label> <br>
+        <label>Age</label>
+        <input type="number" name="age" size="3" min="18" max="100"> <br>
+        <label>Mod</label>
+        <input type="text" value="online" readonly> <br>
+        <input type="submit">
+  
+    </form>
+</body>
+</html> 

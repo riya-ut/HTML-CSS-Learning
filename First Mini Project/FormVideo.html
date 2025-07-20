@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      width: 420px;
+      margin: auto;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: inline-block;
+      width: 130px;
+      font-weight: bold;
+      vertical-align: top;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="number"],
+    .form-group input[type="password"] {
+      width: 220px;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group input[required] {
+      border: 2px solid purple;
+    }
+
+    .form-group input[required]:focus {
+      background-color: silver;
+    }
+
+    .form-group p {
+      display: none;
+      font-size: 12px;
+      background-color: gray;
+      color: white;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-left: 130px;
+      margin-top: 5px;
+    }
+
+    input[name="name"]:hover + p,
+    input[name="priemail"]:hover + p,
+    input[name="pw"]:hover + p {
+      display: inline-block;
+    }
+
+    img {
+      display: none;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+
+    input[name="priemail"]:valid ~ img.Valid {
+      display: inline;
+    }
+
+    input[name="priemail"]:invalid ~ img.Invalid {
+      display: inline;
+    }
+
+    input[type="radio"] {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .submit-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .submit-btn input {
+      padding: 8px 18px;
+      background-color: purple;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn input:hover {
+      background-color: #5e2b8c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up Form</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+      <p>Enter your name</p>
+    </div>
+
+    <div class="form-group">
+      <label for="college">College:</label>
+      <input type="text" name="College" disabled />
+    </div>
+
+    <div class="form-group">
+      <label for="priemail">Primary Email:</label>
+      <input type="email" name="priemail" required />
+      <p>Enter your Primary email</p>
+      <img src="—Pngtree—green check mark_8873320.png" width="15px" height="15px" class="Valid" />
+      <img src="warning-icon.png" width="15px" height="15px" class="Invalid" />
+    </div>
+
+    <div class="form-group">
+      <label for="secemail">Secondary Email:</label>
+      <input type="email" name="Sec email" />
+    </div>
+
+    <div class="form-group">
+      <label for="pw">Password:</label>
+      <input type="password" name="pw" required />
+      <p>Enter your Password, min 6 letters</p>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <div style="display: inline-block;">
+        <label style="margin-right: 20px;">
+          <input type="radio" name="Gender" value="male" /> Male
+        </label>
+        <label>
+          <input type="radio" name="Gender" value="female" /> Female
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" name="age" min="18" max="100" />
+    </div>
+
+    <div class="form-group">
+      <label>Mode:</label>
+      <input type="text" value="online" readonly />
+    </div>
+
+    <div class="submit-btn">
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+</body>
+</html>
