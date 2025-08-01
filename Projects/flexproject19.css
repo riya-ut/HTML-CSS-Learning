@@ -1,0 +1,150 @@
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Abhaya Libre", serif;
+}
+
+.allignment{
+    width: 90%;
+    margin: 10rem auto;
+    
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    flex-grow: 1;
+}
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    
+   
+}
+
+.item {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    gap: 1em;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    gap: 1.2em;
+}
+
+.btn {
+    border: none;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: inherit;
+    padding: 0.5em 1em;
+    flex-grow: 1;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+/* hero section */
+.hero{
+    text-align: center;
+}
+
+.hero__title{
+    font-size: 4rem;
+    letter-spacing: -0.05em;
+}
+
+.hero__discription{
+    font-size: 1.2rem;
+    max-width: 45ch;
+    margin: 2em auto;
+    
+}
+/* Pricing section */
+.Pricing{
+
+}
+.Pricing__title{
+    font-size: 2rem;
+}
+.Pricing__message{
+    font-size: 1.2rem;
+}
+.Pricing__parent{
+    display: flex;
+    gap: 2em;
+    margin-top: 0.75em;
+}
+.Pricing__box{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5em 2.2em;
+    
+    
+}
+.Pricing__btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1.5em 0.5em;
+}
+.Pricing__subject{
+    color: #ccc;
+}
+.Pricing__list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-left: 1em;
+}
+
+/* features section */
+.features{
+    text-align: center;
+}
+.features__title{
+    font-size: 2rem;
+}
+.features__description{
+    font-size: 1.2rem;
+    max-width: 45ch;
+    margin: 1em auto;
+}
+.features__card{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0.02em 2em;
+    flex-grow: 1;
+}
+.features__parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em 4em;
+
+}
