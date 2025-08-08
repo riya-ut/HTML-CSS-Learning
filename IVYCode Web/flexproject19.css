@@ -8,9 +8,22 @@
     margin: 0;
     padding: 0;
 }
+:root {
+  --primary-black: #1a1a1a;
+  --primary-white: #ffffff;
+  --mint: #d5f7e7;
+  --peach: #ffe4d9;
+  --lavender: #f4e3ff;
+  --sky: #dff0ff;
+  --yellow: #fff9d9;
+  --accent-pink: #ffc5e6;
+}
+
+
 
 body {
     font-family: "Abhaya Libre", serif;
+   
 }
 
 .allignment{
@@ -19,7 +32,8 @@ body {
     
 }
 
-.title {
+.title 
+    body {
     text-transform: uppercase;
     font-size: 1.5rem;
     flex-grow: 1;
@@ -53,23 +67,30 @@ body {
 }
 
 .btn {
+    
+    background-color: var(--mint);
+    color: #111;
+    padding: 0.8em 1.5em;
     border: none;
-    background-color: black;
-    color: aliceblue;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-family: inherit;
-    padding: 0.5em 1em;
-    flex-grow: 1;
-    justify-content: flex-end;
-    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
-.btn:hover,
-.Pricing__btn:hover {
-    background-color: #555;
-    color: white;
-    cursor: pointer;
+
+.btn, .Pricing__btn {
+    background-color: var(--accent-pink);
+    color: var(--primary-bg);
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.6em 1.5em;
     transition: 0.3s ease;
+    border: none;
+}
+.btn:hover, .Pricing__btn:hover {
+    background-color: var(--peach);
+    color: black;
 }
 
 /* hero section */
@@ -78,6 +99,7 @@ body {
 }
 
 .hero__title{
+    font-family: 'Quicksand', sans-serif;
     font-size: 4rem;
     letter-spacing: -0.05em;
 }
@@ -93,8 +115,8 @@ body {
   width: 400px;
   margin: 2em auto;
   display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -114,14 +136,15 @@ body {
     margin-top: 0.75em;
 }
 .Pricing__box{
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    padding: 0.5em 2.2em;
-  
-   
-    
-    
+    background-color: var(--sky);
+    color: #222;
+    border-radius: 20px;
+    padding: 1.5em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;  
+}
+.Pricing__box:hover {
+    transform: scale(1.03);
 }
 .Pricing__btn{
     display: inline-block;
@@ -156,10 +179,12 @@ body {
     margin: 1em auto;
 }
 .features__card{
+    background-color: var(--lavender);
     border: 1px solid lightgray;
     border-radius: 10px;
-    padding: 0.02em 2em;
+    padding: 1.5em;
     flex-grow: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 .features__parent{
     display: flex;
